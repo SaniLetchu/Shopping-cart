@@ -17,6 +17,13 @@ function CartModal() {
   const formatTitle = (title) =>
     title.length <= 14 ? title : `${title.substr(0, 14)}...`;
 
+  const totalPrice = () =>
+    cart
+      .reduce(
+        (partialSum, product) => partialSum + product.quantity * product.price,
+        0
+      )
+      .toFixed(2);
   const sumPrice = (quantity, price) => (price * quantity).toFixed(2);
 
   return (
@@ -36,14 +43,14 @@ function CartModal() {
                     <p className="h5">
                       {sumPrice(product.quantity, product.price)} €
                     </p>
-                    <div className="d-flex gap-3">
+                    <div className="container d-flex gap-3 align-items-center justify-content-center">
                       <Button
                         variant="light"
                         onClick={() => dispatch(decrementQuantity(product.id))}
                       >
                         -
                       </Button>
-                      <p>{product.quantity}</p>
+                      <p className="text-center">{product.quantity}</p>
                       <Button
                         variant="light"
                         onClick={() => dispatch(incrementQuantity(product.id))}
@@ -56,14 +63,15 @@ function CartModal() {
               )
           )}
       </Modal.Body>
-      <Modal.Footer>
+      <Modal.Footer className="d-flex align-items-center justify-content-between">
         <Button
-          variant="secondary"
+          variant="light"
           onClick={() => dispatch(openOrCloseCart(false))}
         >
-          Close
+          Keep Shopping
         </Button>
-        <Button variant="primary">Checkout</Button>
+        <p className="h5 text-center">Total: {totalPrice()} €</p>
+        <Button variant="dark">Checkout</Button>
       </Modal.Footer>
     </Modal>
   );

@@ -13,21 +13,23 @@ function HomePage() {
         backgroundPosition: "center",
       }}
     >
-      <Container className="d-flex flex-wrap p-5 gap-5 justify-content-center align-items-center">
-        <Container className="d-flex flex-column gap-3 w-50 w-md-50 justify-content-center">
-          <h1 className="display-1">
-            <strong>Fashion</strong> for <strong>fashionable</strong> people
-          </h1>
-          <Button variant="dark" size="lg" href="/products">
-            Shop Now
-          </Button>
+      <Container className="container d-flex justify-contenent-center align-items-center min-vh-100 pb-5">
+        <Container className="row gap-5">
+          <Container className="col-sm d-flex flex-column gap-2">
+            <h1 className="display-1">
+              <strong>Fashion</strong> for <strong>fashionable</strong> people
+            </h1>
+            <Button variant="dark" size="lg" href="/products">
+              Shop Now
+            </Button>
+          </Container>
+          <Image
+            className="col-sm"
+            style={{ width: 500 }}
+            rounded
+            src="https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80"
+          />
         </Container>
-        <Image
-          style={{ width: 500 }}
-          rounded
-          fluid
-          src="https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80"
-        />
       </Container>
     </Container>
   );
