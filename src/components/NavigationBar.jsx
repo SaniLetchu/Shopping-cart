@@ -1,11 +1,11 @@
 import React from "react";
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
+import Container from "react-bootstrap/Container";
+import Nav from "react-bootstrap/Nav";
+import Navbar from "react-bootstrap/Navbar";
 
-const NavigationBar = () => {
+function NavigationBar() {
   return (
-    <Navbar bg="light" expand="lg">
+    <Navbar fixed="top" bg="light" expand="lg">
       <Container>
         <Navbar.Brand href="/">FakeStore</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -19,6 +19,6 @@ const NavigationBar = () => {
       </Container>
     </Navbar>
   );
-};
+}
 
 export default NavigationBar;

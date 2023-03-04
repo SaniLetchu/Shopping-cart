@@ -4,7 +4,7 @@ import HomePage from "../pages/HomePage";
 import ShopPage from "../pages/ShopPage";
 import ContactPage from "../pages/ContactPage";
 
-const RouteSwitch = () => {
+function RouteSwitch() {
   return (
     <BrowserRouter>
       <Routes>
@@ -14,6 +14,6 @@ const RouteSwitch = () => {
       </Routes>
     </BrowserRouter>
   );
-};
+}
 
 export default RouteSwitch;
