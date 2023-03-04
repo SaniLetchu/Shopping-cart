@@ -13,9 +13,9 @@ function HomePage() {
         backgroundPosition: "center",
       }}
     >
-      <Container className="d-flex flex-wrap p-5 justify-content-center align-items-center">
-        <Container className="d-flex flex-column p-3 w-50 w-md-50 justify-content-center align-items-center">
-          <h1 className="display-1 text-center">
+      <Container className="d-flex flex-wrap p-5 gap-5 justify-content-center align-items-center">
+        <Container className="d-flex flex-column gap-3 w-50 w-md-50 justify-content-center">
+          <h1 className="display-1">
             <strong>Fashion</strong> for <strong>fashionable</strong> people
           </h1>
           <Button variant="dark" size="lg" href="/products">

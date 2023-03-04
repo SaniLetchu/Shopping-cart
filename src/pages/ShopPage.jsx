@@ -35,6 +35,7 @@ function ShopPage() {
               title={product.title}
               price={product.price}
               img={product.image}
+              id={product.id}
             />
           ))}
       </div>
