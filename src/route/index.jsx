@@ -1,16 +1,16 @@
 import React from "react";
-import { HashRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import HomePage from "../pages/HomePage";
 import ShopPage from "../pages/ShopPage";
 
 function RouteSwitch() {
   return (
-    <HashRouter basename={process.env.PUBLIC_URL}>
+    <BrowserRouter basename="/shopping-cart">
       <Routes>
-        <Route path="/" element={<HomePage />} />
+        <Route exact path="/" element={<HomePage />} />
         <Route path="/products" element={<ShopPage />} />
       </Routes>
-    </HashRouter>
+    </BrowserRouter>
   );
 }
 
