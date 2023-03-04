@@ -2,8 +2,20 @@ import React from "react";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
+import { FaShoppingCart } from "react-icons/fa";
+import { useSelector } from "react-redux";
 
 function NavigationBar() {
+  const cart = useSelector((state) => state.cart);
+
+  const getTotalQuantity = () => {
+    let total = 0;
+    cart.forEach((item) => {
+      total += item.quantity;
+    });
+    return total;
+  };
+
   return (
     <Navbar fixed="top" bg="light" expand="lg">
       <Container>
@@ -16,6 +28,16 @@ function NavigationBar() {
             <Nav.Link href="/contact">Contact</Nav.Link>
           </Nav>
         </Navbar.Collapse>
+        <Nav className="navbar-nav d-flex flex-row me-1">
+          <Nav.Link>
+            <FaShoppingCart size={30} />
+            {getTotalQuantity() !== 0 && (
+              <span className="badge rounded-pill badge-notification bg-danger">
+                {getTotalQuantity()}
+              </span>
+            )}
+          </Nav.Link>
+        </Nav>
       </Container>
     </Navbar>
   );
