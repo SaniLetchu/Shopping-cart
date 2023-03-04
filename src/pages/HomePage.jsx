@@ -1,5 +1,6 @@
 import React from "react";
-import { Container, Image, Button } from "react-bootstrap";
+import { Container, Image } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 function HomePage() {
   return (
@@ -19,9 +20,9 @@ function HomePage() {
             <h1 className="display-1">
               <strong>Fashion</strong> for <strong>fashionable</strong> people
             </h1>
-            <Button variant="dark" size="lg" href="/products">
+            <Link to="/products" className="btn btn-dark btn-lg">
               Shop Now
-            </Button>
+            </Link>
           </Container>
           <Image
             className="col-sm"

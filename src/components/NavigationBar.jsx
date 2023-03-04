@@ -4,6 +4,7 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import { FaShoppingCart } from "react-icons/fa";
 import { useSelector, useDispatch } from "react-redux";
+import { Link } from "react-router-dom";
 import { openOrCloseCart } from "../redux/cartSlice";
 
 function NavigationBar() {
@@ -21,12 +22,18 @@ function NavigationBar() {
   return (
     <Navbar fixed="top" bg="light" expand="lg">
       <Container>
-        <Navbar.Brand href="/">FashionStore</Navbar.Brand>
+        <Link to="/" className="navbar-brand">
+          FashionStore
+        </Link>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="/">Home</Nav.Link>
-            <Nav.Link href="/products">Products</Nav.Link>
+            <Link to="/" className="nav-link">
+              Home
+            </Link>
+            <Link to="/products" className="nav-link">
+              Products
+            </Link>
           </Nav>
         </Navbar.Collapse>
         <Nav className="navbar-nav d-flex flex-row me-1">
