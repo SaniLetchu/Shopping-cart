@@ -7,8 +7,8 @@ function RouteSwitch() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/products" element={<ShopPage />} />
+        <Route path="/Shopping-cart" element={<HomePage />} />
+        <Route path="/Shopping-cart/products" element={<ShopPage />} />
       </Routes>
     </BrowserRouter>
   );

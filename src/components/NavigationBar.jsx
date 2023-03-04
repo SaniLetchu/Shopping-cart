@@ -21,7 +21,7 @@ function NavigationBar() {
   return (
     <Navbar fixed="top" bg="light" expand="lg">
       <Container>
-        <Navbar.Brand href="/">FashionStore</Navbar.Brand>
+        <Navbar.Brand href="/Shopping-cart">FashionStore</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">

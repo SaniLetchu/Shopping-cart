@@ -19,7 +19,7 @@ function HomePage() {
             <h1 className="display-1">
               <strong>Fashion</strong> for <strong>fashionable</strong> people
             </h1>
-            <Button variant="dark" size="lg" href="/products">
+            <Button variant="dark" size="lg" href="/Shopping-cart/products">
               Shop Now
             </Button>
           </Container>
